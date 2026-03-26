@@ -1,0 +1,642 @@
+/*  SITE STYLING  */
+
+/* Import Google Fonts used across the site */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+/* Reset default browser spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main body styling */
+body {
+  font-family: "Poppins", sans-serif; /* Primary font */
+  background: rgb(7, 7, 39); /* Dark background */
+}
+
+/* Smooth scrolling when clicking anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Default paragraph text color */
+p {
+  color: white;
+}
+
+
+/* Smooth transition for links and buttons */
+a,
+.btn {
+  transition: all 0.3s ease;
+}
+
+
+/* Flex layout for navbar and links */
+nav,
+.nav-links {
+  display: flex;
+}
+
+/* Navbar alignment and spacing */
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+/* Navigation links styling */
+.nav-links {
+  gap: 2rem; /* space between links */
+  list-style: none; /* remove bullets */
+  font-size: 1.5rem;
+}
+
+/* Default link styling */
+a {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+/* Hover effect for links */
+a:hover {
+  color: gray;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Logo styling */
+.logo {
+  font-size: 2rem;
+  color: #6ea8ff;
+}
+
+/* Prevent hover effect on logo */
+.logo:hover {
+  cursor: default;
+}
+
+/* Hide hamburger nav by default (for desktop) */
+#hamburger-nav {
+  display: none;
+}
+
+/* Container for hamburger menu */
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hamburger icon layout (3 stacked lines) */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* Individual lines of hamburger icon */
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: #6ea8ff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dropdown menu container */
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(7, 7, 39);
+  width: fit-content;
+  max-height: 0; /* hidden by default */
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Links inside dropdown menu */
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+/* Hover effect for dropdown links */
+.menu-links a:hover {
+  color: gray;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Remove bullets from dropdown list */
+.menu-links li {
+  list-style: none;
+}
+
+/* Show menu when active */
+.menu-links.open {
+  max-height: 300px;
+}
+
+/* Animate hamburger into "X" when open */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+/* Hide middle line */
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+/* Rotate last line */
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* Reset transformations when closed */
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+
+/* General section layout */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+/* Flex container for sections */
+.section-container {
+  display: flex;
+}
+
+
+/* Center content horizontally */
+#hero {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+/* Profile image container */
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* Profile image styling */
+.profile-pic {
+  border-radius: 50%; /* circular image */
+  padding: 12px;
+  background: rgb(7, 7, 39);
+
+  /* Decorative borders */
+  border-top: solid #bbceea;
+  border-bottom: solid gold;
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Text container */
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+/* Bold paragraph text */
+.section__text p {
+  font-weight: 600;
+}
+
+/* Subtitle text */
+.section__text__p1 {
+  text-align: center;
+}
+
+/* Larger subtitle */
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Section titles */
+.title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #6ea8ff;
+}
+
+/* Main heading */
+.title_one {
+  font-size: 3rem;
+  text-align: center;
+  color: #6ea8ff;
+}
+
+/* Social icons container */
+#socials-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* Icon styling */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+
+/* Button container layout */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Base button styling */
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+/* Default button colors */
+.btn-color-1,
+.btn-color-2 {
+  background: rgba(110, 168, 255, 0.15);
+  color: #cfe0ff;
+}
+
+/* Hover cursor */
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+/* Shared hover background */
+.btn-color-1,
+.btn-color-2:hover {
+  background: #0a2e63;
+  color: rgb(233, 210, 210);
+}
+
+/* Hire me button hover */
+.btn-color-1:hover {
+  background: #1b3152;
+  color: white;
+}
+
+/* Resume button default */
+.btn-color-2 {
+  background: none;
+  color: rgb(233, 210, 210);
+}
+
+/* Resume button hover */
+.btn-color-2:hover {
+  border: #1b3152;
+  background: #1b3152;
+  color: white;
+}
+
+
+/* About section layout */
+#about {
+  position: relative;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Two-column layout */
+.about-columns {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Left side text */
+.about-left {
+  flex: 1.2;
+  text-align: left;
+}
+
+/* Paragraph styling */
+.about-text {
+  margin-top: 1rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Small heading image */
+.about-heading-img {
+  width: 120px;
+  margin: 1rem 0;
+  border-radius: 12px;
+}
+
+/* Right side image */
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main image */
+.about-main-img {
+  width: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Scroll animation (fade + slide up) */
+.text-container {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: transform 2s ease-out, opacity 0.6s ease-out;
+}
+
+/* When visible */
+.text-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Arrow icon positioning */
+.arrow {
+  position: absolute;
+  right: -4rem;
+  bottom: 2.5rem;
+}
+
+/* Skills section wrapper */
+#skills {
+  position: relative;
+  padding: 3rem 0;
+}
+
+/* Skills layout */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+/* Individual skill card */
+.skill-box {
+  width: 260px;
+  background: rgb(14, 14, 60);
+  padding: 1.4rem;
+  border-radius: 18px;
+  border: 1px solid #6ea8ff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Skill title */
+.skill-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #cfe0ff;
+}
+
+/* Grid layout for skills */
+.skill-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  width: 100%;
+}
+
+/* Individual skill tag */
+.skill-items span {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Arrow positioning */
+#skills .arrow {
+  position: absolute;
+  right: -4rem;
+  bottom: 2rem;
+}
+
+
+/* Projects section */
+#projects {
+  position: relative;
+  padding: 4rem 0;
+}
+
+/* Projects container */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Individual project card */
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 900px;
+  gap: 2rem;
+}
+
+/* Reverse layout for alternating design */
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Project text */
+.project-text {
+  flex: 1;
+  min-width: 280px;
+  color: #ffffff;
+}
+
+/* Project title */
+.project-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Project description */
+.project-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Tech stack tags container */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Individual tech tag */
+.tech-stack span {
+  background: rgba(110, 168, 255, 0.15);
+  color: #cfe0ff;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  border: none;
+}
+
+/* Project icons container */
+.project-buttons {
+  display: flex;
+}
+
+/* Project link icons */
+.project-link-icon {
+  width: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect on icons */
+.project-link-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Project image container */
+.project-image {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* Project image styling */
+.project-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Hover zoom effect */
+.project-image img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Darken image on hover */
+.project-image:hover img {
+  filter: brightness(70%);
+}
+
+
+/* Contact section layout */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+/* Outer container */
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+/* Inner contact items */
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+/* Remove underline from links */
+.contact-info-container a {
+  text-decoration: none;
+  font-size: large;
+}
+
+/* Contact icon */
+.contact-icon {
+  cursor: default;
+}
+
+/* Email icon size */
+.email-icon {
+  height: 2.5rem;
+}
+
+
+/* Footer layout */
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+/* Center footer text */
+footer p {
+  text-align: center;
+}

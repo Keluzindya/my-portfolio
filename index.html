@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title -->
+    <title>Keren L | Web Developer Portfolio</title>
+    <!-- Website icon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <!-- Main styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive styles -->
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+  </head>
+
+  <body>
+    <!-- Desktop Navigation Menu -->
+    <nav id="desktop-nav">
+      <div class="logo">Keren Luzindya</div>
+      <ul class="nav-links">
+        <!-- Navigation links scroll to sections -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation (Hamburger Menu) -->
+    <nav id="hamburger-nav">
+      <div class="logo">MyPortfolio</div>
+      <div class="hamburger-menu">
+        <!-- Icon that toggles mobile menu -->
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Mobile menu links -->
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero / Introduction Section -->
+    <section id="hero">
+      <!-- Profile Image -->
+      <div class="section__pic-container">
+        <img
+          src="./images/profile_image.jpeg"
+          alt="Keren's hero image"
+          class="profile-pic"
+        />
+      </div>
+
+      <!-- Intro text with typing effect -->
+      <div class="section__text">
+        <p id="greeting__text"></p>
+        <h1 class="title_one" id="typing_text"></h1>
+        <p class="section__text__p2">Web Developer</p>
+
+        <!-- Action buttons -->
+        <div class="btn-container">
+          <!-- Opens resume file -->
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./images/myResume.docx.pdf')"
+          >
+            Resume
+          </button>
+
+          <!-- Scrolls to contact section -->
+          <button
+            class="btn btn-color-1"
+            onclick="location.href = './#contact'"
+          >
+            Hire Me
+          </button>
+        </div>
+
+        <!-- Social media links -->
+        <div id="socials-icons">
+          <img
+            src="./images/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="
+              location.href =
+                'https://www.linkedin.com/in/keren-luzindya-aa695b280/'
+            "
+          />
+          <img
+            src="./images/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href = 'https://github.com/Keluzindya'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-columns">
+        <!-- Left side: text content -->
+        <div class="about-left text-container">
+          <p class="section__text__p1">Get To Know More</p>
+          <h1 class="title">About Me</h1>
+
+          <!-- Personal description -->
+          <p class="about-text">
+            Web Developer and Problem-Solver dedicated to building engaging,
+            responsive, and user-friendly web applications. I specialize in
+            creating clean frontend interfaces and developing reliable backend
+            functionality to deliver complete, maintainable solutions. My core
+            strength lies in translating complex requirements into
+            well-documented, working software. Driven by collaboration and
+            continuous learning, I am eager to contribute my skills to a dynamic
+            team and create impactful digital experiences.
+          </p>
+        </div>
+
+        <!-- Right side: profile/illustration image -->
+        <div class="about-right">
+          <img
+            src="./images/aboutSection.jpg"
+            alt="Profile image"
+            class="about-main-img"
+          />
+        </div>
+      </div>
+
+      <!-- Arrow to scroll to next section -->
+      <img
+        src="./images/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href = './#skills'"
+      />
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+
+      <div class="skills-container">
+        <!-- Frontend Skills -->
+        <div class="skill-box">
+          <h2 class="skill-title">Frontend</h2>
+          <div class="skill-items">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>SASS</span>
+            <span>JavaScript</span>
+            <span>jQuery</span>
+            <span>React</span>
+            <span>Tailwind CSS</span>
+            <span>Bootstrap</span>
+            <span>WordPress</span>
+          </div>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="skill-box">
+          <h2 class="skill-title">Backend</h2>
+          <div class="skill-items">
+            <span>C#</span>
+            <span>ASP.NET MVC</span>
+            <span>ADO.NET</span>
+            <span>PHP</span>
+            <span>Laravel</span>
+            <span>MySQL</span>
+            <span>PostgreSQL</span>
+            <span>T-SQL</span>
+          </div>
+        </div>
+
+        <!-- UI/UX Skills -->
+        <div class="skill-box">
+          <h2 class="skill-title">UI / UX</h2>
+          <div class="skill-items">
+            <span>Figma</span>
+            <span>Wireframing</span>
+            <span>Prototyping</span>
+            <span>User Testing</span>
+            <span>Responsive Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow to next section -->
+      <img
+        src="./images/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href = './#projects'"
+      />
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <p class="section__text__p1">Some Things I've Built</p>
+      <h1 class="title">My Work</h1>
+
+      <div class="projects-container">
+        <!-- Project 1: HappyCups -->
+        <div class="project">
+          <div class="project-text">
+            <h2 class="project-title">HappyCups</h2>
+
+            <!-- Project description -->
+            <p class="project-description">
+              A Coffee shop web application built to manage customer orders and
+              products efficiently. Customers can place coffee orders, while
+              authorized roles such as admin, manager, and staff have access to
+              a secure dashboard to view customer details, order history, and
+              dates. Administrators can add, edit, or delete products, while
+              sensitive data remains hidden from customers.
+            </p>
+
+            <!-- Technologies used -->
+            <div class="tech-stack">
+              <span>C#</span>
+              <span>ASP.NET MVC</span>
+              <span>T-SQL</span>
+              <span>JavaScript</span>
+              <span>CSS</span>
+            </div>
+
+            <!-- External links -->
+            <div class="project-buttons">
+              <a href="https://fundfairy.larability.com" target="_blank">
+                <img
+                  src="./images/link_icon.png"
+                  alt="Live Project"
+                  class="project-link-icon"
+                />
+              </a>
+              <a href="https://github.com/Keluzindya/HappyCups" target="_blank">
+                <img
+                  src="./images/github-link.png"
+                  alt="GitHub Repository"
+                  class="project-link-icon"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Project preview image -->
+          <div class="project-image">
+            <a href="https://fundfairy.larability.com" target="_blank">
+              <img src="./images/happyCups.jpg" alt="HappyCups project" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Fundfairy -->
+        <div class="project reverse">
+          <div class="project-text">
+            <h2 class="project-title">Fundfairy</h2>
+
+            <!-- Project description -->
+            <p class="project-description">
+              A community-driven donation platform where users must create an
+              account and log in to donate to projects or receive
+              community-funded support. The application was built as a
+              collaborative team project using GitHub for version control, pull
+              requests, and code reviews.
+            </p>
+
+            <!-- Technologies used -->
+            <div class="tech-stack">
+              <span>PHP</span>
+              <span>Laravel</span>
+              <span>Blade</span>
+              <span>Tailwind CSS</span>
+              <span>PostgreSQL</span>
+              <span>MVC Architecture</span>
+            </div>
+
+            <!-- External links -->
+            <div class="project-buttons">
+              <a href="https://fundfairy.larability.com" target="_blank">
+                <img
+                  src="./images/link_icon.png"
+                  alt="Live Project"
+                  class="project-link-icon"
+                />
+              </a>
+              <a href="https://github.com/Maghion/fundfairy" target="_blank">
+                <img
+                  src="./images/github-link.png"
+                  alt="GitHub Repository"
+                  class="project-link-icon"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- Project preview image -->
+          <div class="project-image">
+            <a href="https://fundfairy.larability.com" target="_blank">
+              <img src="./images/fundfairy1.jpg" alt="Fundfairy project" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Little Light Moments-->
+        <div class="project">
+          <div class="project-text">
+            <h2 class="project-title">Little Light Moments</h2>
+
+            <!-- Project description -->
+            <p class="project-description">
+              A professional photography website built to showcase event
+              coverage including weddings, birthdays, graduations, maternity,
+              church services, and special celebrations. The platform enables
+              clients to explore services, view past work, and seamlessly book
+              photography or videography sessions.
+            </p>
+
+            <!-- Technologies used -->
+            <div class="tech-stack">
+              <span>WordPress</span>
+              <span>Elementor</span>
+              <span>WPForms</span>
+            </div>
+
+            <!-- External links -->
+            <div class="project-buttons">
+              <a href="https://littlelightmoments.com" target="_blank">
+                <img
+                  src="./images/link_icon.png"
+                  alt="Live Project"
+                  class="project-link-icon"
+                />
+              </a>
+            </div>git
+          </div>
+
+          <!-- Project preview image -->
+          <div class="project-image">
+            <a href="https://littlelightmoments.com" target="_blank">
+              <img
+                src="./images/littlelightmoments.jpg"
+                alt="Little Light Moments project"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow to contact section -->
+      <img
+        src="./images/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href = './#contact'"
+      />
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <p class="section__text__p1">What's Next?</p>
+      <h1 class="title">Get in Touch</h1>
+
+      <div class="contact-info-upper-container">
+        <!-- Email contact -->
+        <div class="contact-info-container">
+          <img
+            src="./images/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a
+              href="mailto:lakerenluzindya@gmail.com?subject=Portfolio%20Contact%20Form"
+              >Email Me</a
+            >
+          </p>
+        </div>
+
+        <!-- LinkedIn contact -->
+        <div class="contact-info-container">
+          <img
+            src="./images/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/keren-luzindya-aa695b280/"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <nav>
+        <!-- Footer navigation links -->
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Copyright -->
+      <p>Copyright &#169; 2025 Keren Luzindya. All Rights Reserved.</p>
+      <p><b>Let's create something amazing together!</b></p>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
